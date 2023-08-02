@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +31,7 @@ Route::post('/car/store', [CarController::class, 'store'])->name('car.store');
 
 
 Route::get('/blog',[PostController::class, 'index']);
+Route::get('/users',[UserController::class, 'index']);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
