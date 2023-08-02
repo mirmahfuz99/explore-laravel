@@ -8,4 +8,8 @@
 6. php artisan make:event PostCreated
 7. php artisan make:listener PostCacheListener
 
+
+8. brew --version
+9. brew services start redis
+
 https://www.youtube.com/watch?v=-NOOqIYEFwc&ab_channel=CodeWithDary
