@@ -13,3 +13,16 @@
 9. brew services start redis
 
 https://www.youtube.com/watch?v=-NOOqIYEFwc&ab_channel=CodeWithDary
+
+
+tinker:
+
+<!-- to see all products -->
+\Products::all();
+
+<!-- to add new product  -->
+$product = new \App\Product();
+
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
