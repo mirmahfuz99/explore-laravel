@@ -14,10 +14,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::with('category')->get();
-        $categories = Categories::with('products')->get();
+        // $products = Product::with('category')->get();
+        // $categories = Categories::with('products')->get();
 
-        dd($categories, $products);
+        // dd($categories, $products);
 
 
 

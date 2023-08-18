@@ -1,28 +1,24 @@
+PUSHER App Keys 
 
-1. composer require laravel/ui
-2. php artisan ui vue --auth 
-3. npm install && npm run dev
+app_id = "1654703"
+key = "fd47984aada1dd97771b"
+secret = "ec5e289e3ec2d1125992"
+cluster = "ap2"
 
-4.php artisan tiner
-5.App\Models\Post::factory()->count(1000)->create();
-6. php artisan make:event PostCreated
-7. php artisan make:listener PostCacheListener
+open xampp from terminal:
+sudo /opt/lampp/manager-linux-x64.run
 
+Stopping commend MySQL and apache2
 
-8. brew --version
-9. brew services start redis
+sudo service mysql stop
+sudo /etc/init.d/mysql stop
 
-https://www.youtube.com/watch?v=-NOOqIYEFwc&ab_channel=CodeWithDary
-
-
-tinker:
-
-<!-- to see all products -->
-\Products::all();
-
-<!-- to add new product  -->
-$product = new \App\Product();
+sudo /etc/init.d/apache2 stop
 
 
-INSERT INTO table_name (column1, column2, column3, ...)
-VALUES (value1, value2, value3, ...);
+mysql -u root -p
+
+nautilus /opt
+
+//create db.sqlite file
+touch database/db.sqlite
