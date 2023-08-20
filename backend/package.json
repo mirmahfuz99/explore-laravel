@@ -9,8 +9,9 @@
     "test:unit": "vitest"
   },
   "dependencies": {
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
+    "vue": "^3.2.36",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.1",
