@@ -20,9 +20,11 @@ use App\Http\Controllers\RedisController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[UserController::class, 'doSomething']);
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::view('upload','upload');
 Route::post('upload',[UploadController::class, 'index']);
