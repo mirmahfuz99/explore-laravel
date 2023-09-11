@@ -20,6 +20,18 @@ use App\Http\Controllers\RedisController;
 |
 */
 
+class Person{
+    public function getName(): string{
+        return "Person";
+    }
+}
+
+app()->bind("test", function(){
+    return new Person();
+});
+
+dd(app()->make("test")->getName());
+
 Route::get('/',[UserController::class, 'doSomething']);
 
 // Route::get('/', function () {
