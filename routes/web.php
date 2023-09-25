@@ -1,12 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UploadController;
-use App\Http\Controllers\CarController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\RedisController;
 
 
 /*
@@ -20,39 +15,7 @@ use App\Http\Controllers\RedisController;
 |
 */
 
-class Person{
-    public function getName(): string{
-        return "Person";
-    }
-}
 
-app()->bind("test", function(){
-    return new Person();
+Route::get('/', function() {
+    return view('welcome');
 });
-
-dd(app()->make("test")->getName());
-
-Route::get('/',[UserController::class, 'doSomething']);
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::view('upload','upload');
-Route::post('upload',[UploadController::class, 'index']);
-
-Route::get('/cars', [CarController::class, 'index'])->name('car.index');
-Route::get('/car/create', [CarController::class, 'create'])->name('car.create');
-Route::post('/car/store', [CarController::class, 'store'])->name('car.store');
-
-
-
-Route::get('/blog',[PostController::class, 'index']);
-Route::get('/users',[UserController::class, 'index']);
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/radis',[RedisController::class, 'index']);
-
-Route::get('/products',[ProductController::class, 'index']);

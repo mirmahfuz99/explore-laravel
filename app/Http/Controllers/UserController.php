@@ -15,8 +15,4 @@ class UserController extends Controller
         return view('users.index', compact('users'));
     }
 
-    public function doSomething()
-    {
-        return SampleService::doSomething();
-    }
 }

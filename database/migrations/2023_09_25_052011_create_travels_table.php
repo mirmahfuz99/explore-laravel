@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->id();
-            $table->String('catname');
+        Schema::create('travels', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->boolean('is_public')->default(false);
+            $table->String('slug')->unique();
+            $table->String('name');
+            $table->text('description');
+            $table->unsignedInteger('number_of_days');
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('travels');
     }
 };
